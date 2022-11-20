@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1668940006.632694
+_modified_time = 1668940092.3719401
 _enable_loop = True
 _template_filename = '/usr/local/lib/python3.9/site-packages/nikola/data/themes/bootstrap4/templates/authors.tmpl'
 _template_uri = 'authors.tmpl'
@@ -35,12 +35,12 @@ def render_body(context,**pageargs):
         def content():
             return render_content(context._locals(__M_locals))
         feeds_translations = _mako_get_namespace(context, 'feeds_translations')
+        hidden_authors = _import_ns.get('hidden_authors', context.get('hidden_authors', UNDEFINED))
+        items = _import_ns.get('items', context.get('items', UNDEFINED))
+        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
+        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
         def extra_head():
             return render_extra_head(context._locals(__M_locals))
-        items = _import_ns.get('items', context.get('items', UNDEFINED))
-        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
-        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
-        hidden_authors = _import_ns.get('hidden_authors', context.get('hidden_authors', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer('\n\n')
@@ -85,10 +85,10 @@ def render_content(context,**pageargs):
         def content():
             return render_content(context)
         feeds_translations = _mako_get_namespace(context, 'feeds_translations')
-        items = _import_ns.get('items', context.get('items', UNDEFINED))
-        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
-        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
         hidden_authors = _import_ns.get('hidden_authors', context.get('hidden_authors', UNDEFINED))
+        items = _import_ns.get('items', context.get('items', UNDEFINED))
+        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
+        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n')
         if items:
