@@ -1,0 +1,22 @@
+#+BEGIN_COMMENT
+.. title: backtrader
+.. slug: backtrader
+.. date: 2022-11-20 17:15:13 UTC+08:00
+.. tags:
+.. category:
+.. link:
+.. description:
+.. type: text
+
+#+END_COMMENT
+
+最近开始在实验性得做 Uniswap V3 的 active LP strategy 的业务，接触了一点 quant 知识，
+记录一下自己的学习路径。然后没想到的是，放下已久的 ML 知识又要开始拾起了，真是风水
+轮流转，永远不要定义自己。
+
+#+HTML: <!--TEASER_END-->
+
+1. Backtrader
+   基于 python 的一个回测框架，非常灵活。基本要素有 Strategy、Observer、Analysis、
+   Indicator。他的基本处理单元是一行行 data feeds，每个 data feed 有 OHLC、date、
+   volume 等数据，每行都会回调 Strategy、Observer 的 next 方法，在里面进行处理。
