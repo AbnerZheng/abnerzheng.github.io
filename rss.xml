@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>My Nikola Site</title><link>https://example.com/</link><description>This is a demo site for Nikola.</description><atom:link href="https://example.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2022 &lt;a href="mailto:abnerzheng@gmail.com"&gt;Abner Zheng&lt;/a&gt; </copyright><lastBuildDate>Sun, 20 Nov 2022 10:19:10 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>backtrader</title><link>https://example.com/posts/backtrader/</link><dc:creator>Abner Zheng</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>My Nikola Site</title><link>https://example.com/</link><description>This is a demo site for Nikola.</description><atom:link href="https://example.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2022 &lt;a href="mailto:abnerzheng@gmail.com"&gt;Abner Zheng&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Nov 2022 06:31:22 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>effective python</title><link>https://example.com/posts/effective-python/</link><dc:creator>Abner Zheng</dc:creator><description>&lt;div&gt;&lt;p&gt;
+Python 逐渐成了干活的主力，所以最近一直在看书和材料精进一下 Python 的技艺。这里
+记录一下读书中觉得受用的知识点，以供之后复习。
+&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://example.com/posts/effective-python/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>python</category><guid>https://example.com/posts/effective-python/</guid><pubDate>Tue, 22 Nov 2022 04:54:09 GMT</pubDate></item><item><title>backtrader</title><link>https://example.com/posts/backtrader/</link><dc:creator>Abner Zheng</dc:creator><description>&lt;div&gt;&lt;p&gt;
 最近开始在实验性得做 Uniswap V3 的 active LP strategy 的业务，接触了一点 quant 知识，
 记录一下自己的学习路径。然后没想到的是，放下已久的 ML 知识又要开始拾起了，真是风水
 轮流转，永远不要定义自己。
 &lt;/p&gt;
 
-&lt;p&gt;&lt;a href="https://example.com/posts/backtrader/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://example.com/posts/backtrader/</guid><pubDate>Sun, 20 Nov 2022 09:15:13 GMT</pubDate></item><item><title>Welcome to Nikola</title><link>https://example.com/posts/welcome-to-nikola/</link><dc:creator>Roberto Alsina</dc:creator><description>&lt;figure&gt;
-&lt;a class="reference external image-reference" href="https://farm1.staticflickr.com/138/352972944_4f9d568680_z.jpg?zz=1"&gt;&lt;img alt="Nikola Tesla Corner by nicwest, on Flickr" class="thumbnail" src="https://farm1.staticflickr.com/138/352972944_4f9d568680.jpg"&gt;&lt;/a&gt;
-&lt;/figure&gt;
-&lt;p&gt;If you can see this in a web browser, it means you managed to install Nikola,
-and build a site using it. Congratulations!&lt;/p&gt;
-&lt;p&gt;Next steps:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://example.com/pages/handbook/"&gt;Read the manual&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://getnikola.com"&gt;Visit the Nikola website to learn more&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://example.com/galleries/demo/"&gt;See a demo photo gallery&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://example.com/pages/listings-demo/"&gt;See a demo listing&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://example.com/pages/dr-nikolas-vendetta/"&gt;See a demo of a longer text&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Send feedback to &lt;a class="reference external" href="mailto:info@getnikola.com"&gt;info@getnikola.com&lt;/a&gt;!&lt;/p&gt;</description><category>blog</category><category>demo</category><category>nikola</category><category>python</category><guid>https://example.com/posts/welcome-to-nikola/</guid><pubDate>Sat, 31 Mar 2012 02:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://example.com/posts/backtrader/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://example.com/posts/backtrader/</guid><pubDate>Sun, 20 Nov 2022 09:15:13 GMT</pubDate></item></channel></rss>
