@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>https://example.com/authors/abner-zheng.xml</loc>
-  <lastmod>2022-11-20T10:19:00Z</lastmod>
+  <lastmod>2022-11-23T05:58:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://example.com/authors/roberto-alsina.xml</loc>
@@ -22,6 +22,14 @@
   <lastmod>2022-11-20T09:36:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://example.com/categories/cat_reading-notes.xml</loc>
+  <lastmod>2022-11-23T05:58:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://example.com/categories/cat_reading_notes.xml</loc>
+  <lastmod>2022-11-23T05:58:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://example.com/categories/demo.xml</loc>
   <lastmod>2022-11-20T09:36:00Z</lastmod>
  </sitemap>
@@ -31,7 +39,7 @@
  </sitemap>
  <sitemap>
   <loc>https://example.com/categories/python.xml</loc>
-  <lastmod>2022-11-20T09:36:00Z</lastmod>
+  <lastmod>2022-11-23T05:58:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://example.com/galleries/demo/rss.xml</loc>
@@ -43,10 +51,10 @@
  </sitemap>
  <sitemap>
   <loc>https://example.com/rss.xml</loc>
-  <lastmod>2022-11-20T10:19:00Z</lastmod>
+  <lastmod>2022-11-23T05:58:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://example.com/sitemap.xml</loc>
-  <lastmod>2022-11-20T10:28:00Z</lastmod>
+  <lastmod>2022-11-23T05:58:00Z</lastmod>
  </sitemap>
 </sitemapindex>

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>My Nikola Site</title><link>https://example.com/</link><description>This is a demo site for Nikola.</description><atom:link href="https://example.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2022 &lt;a href="mailto:abnerzheng@gmail.com"&gt;Abner Zheng&lt;/a&gt; </copyright><lastBuildDate>Sun, 20 Nov 2022 10:19:10 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>backtrader</title><link>https://example.com/posts/backtrader/</link><dc:creator>Abner Zheng</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>My Nikola Site</title><link>https://example.com/</link><description>This is a demo site for Nikola.</description><atom:link href="https://example.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2022 &lt;a href="mailto:abnerzheng@gmail.com"&gt;Abner Zheng&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Nov 2022 05:58:36 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>effective python</title><link>https://example.com/posts/effective-python/</link><dc:creator>Abner Zheng</dc:creator><description>&lt;div&gt;&lt;p&gt;
+Python 逐渐成了干活的主力，所以最近一直在看书和材料精进一下 Python 的技艺。这里
+记录一下读书中觉得受用的知识点，以供之后复习。
+&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://example.com/posts/effective-python/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>python</category><guid>https://example.com/posts/effective-python/</guid><pubDate>Tue, 22 Nov 2022 04:54:09 GMT</pubDate></item><item><title>backtrader</title><link>https://example.com/posts/backtrader/</link><dc:creator>Abner Zheng</dc:creator><description>&lt;div&gt;&lt;p&gt;
 最近开始在实验性得做 Uniswap V3 的 active LP strategy 的业务，接触了一点 quant 知识，
 记录一下自己的学习路径。然后没想到的是，放下已久的 ML 知识又要开始拾起了，真是风水
 轮流转，永远不要定义自己。

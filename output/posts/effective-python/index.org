@@ -1,0 +1,88 @@
+#+BEGIN_COMMENT
+.. title: effective python
+.. slug: effective-python
+.. date: 2022-11-22 12:54:09 UTC+08:00
+.. tags: python
+.. category: reading notes
+.. link: 
+.. description: 
+.. type: text
+
+#+END_COMMENT
+
+Python 逐渐成了干活的主力，所以最近一直在看书和材料精进一下 Python 的技艺。这里
+记录一下读书中觉得受用的知识点，以供之后复习。
+
+#+HTML: <!--TEASER_END-->
+
+*** 1. 生成器表达式
+主要的用法如下，可以使用一个括号快速生成一个 generator，惰性地生成内容，主要优点是较 for list comprehension 内存节省很多。
+
+#+begin_src python
+it = (len(x) for x in open('/tmp/my_file.txt'))
+next_item = next(i)
+for i in it:
+print(i)
+#+end_src
+
+Python 中的 Generator 并没有常见的 has_next 方法，而是通过处理 next 抛出的 StopException 来表明已经到了终点, 这是 Python 语言的哲学，  EAFP (easier to
+ask for forgiveness than permission), has_next 遵循的原则是 LBYL (look before you leap)，与 EAFP 相悖。其实也是，我自己在做 SimpleDB 的时候，要支持 hasNext 方法，往往都需要在上一次的 next 方法中提前算好下一次的，效率上确实有所牺牲，但是拿一个 Exception 来做 Flow control 确实不大好。
+
+*** 2. 尽量使用 enumerate 取代 range
+使用内置的 enumerate 可以同时拿到 index 和 item。
+#+begin_src python
+for i, flavor in enumerate(flavor_list):
+    print("%d: %s" % (i+1, flavor))
+#+end_src
+
+*** 3. Python 的迭代器协议
+Python 的 for 语句，以及一些接受 iterator 的函数，都会先调用对象的__iter__方法，得到
+一个迭代器对象，之后再反复调用 next 方法，直至耗尽并产生 StopIteration 异常。
+根据这个特点，我们可以在类中 override __iter__方法，并返回一个新的 generator 对象，
+保证这个实例能够重复被迭代。
+#+begin_src python
+class ReadVisits(object):
+    def __init__(self, data_path):
+        self.data_path = data_path
+
+    def __iter__(self):
+        with open(self.data_path) as f:
+            for line in f:
+                yield int(line)
+#+end_src
+
+*** 4. 参数的默认值
+参数的默认值只在执行定义函数的时候定义一次，所以当这个值是一个可变参数时，往往会
+出错。比如:
+#+begin_src python
+def log(message, when=datetime.now()):
+    print("%s: %s" % (when, message))
+log("hi")
+log("there")
+#+end_src
+两次调用的 when 将会是一致的，这显然不是我们想要的，作者建议我们使用 None 来表示缺省
+值。
+
+另外还会有一种情况，如:
+#+begin_src python
+def decode(data, default={}):
+    try:
+        return json.loads(data)
+    except ValueError:
+        return default
+#+end_src
+
+每次调用 decode 方法返回的 default 其实是同一个对象。
+*** 5. 强制使用关键字参数
+有时我们希望用户只能使用关键字参数，不能使用位置参数，这个需求可以用*来占位实现，
+如下：
+#+begin_src python
+def safe_division(number, divisor, *, ignore_overflow=False):
+    pass
+#+end_src
+*** 6. 多用 public 属性，少用 private 属性
+Python 编译器无法严格保证 private 字段的私密性，所以最大的优势没了，而且在继承的子
+类中，也是无法访问父类的属性，这样反而会带来更多的麻烦，应该多用 protected 属性。
+*** 7. 继承 collections.abi 以实现自定义的容器类型
+collections.abi 包中定义了一系列的容器抽象类，其中定义了一系列的必须实现的基本方
+法，继承类实现这些方法，就可以将这个继承类当成对应的容器类使用了。

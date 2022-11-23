@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>effective python | My Nikola Site</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="zh_cn" href="../../rss.xml">
+<link rel="canonical" href="https://example.com/posts/effective-python/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Abner Zheng">
+<link rel="prev" href="../backtrader/" title="backtrader" type="text/html">
+<meta property="og:site_name" content="My Nikola Site">
+<meta property="og:title" content="effective python">
+<meta property="og:url" content="https://example.com/posts/effective-python/">
+<meta property="og:description" content="Python 逐渐成了干活的主力，所以最近一直在看书和材料精进一下 Python 的技艺。这里
+记录一下读书中觉得受用的知识点，以供之后复习。
+
+
+
+
+
+1. 生成器表达式
+
+
+主要的用法如下，可以使用一个括号快速生成一个 generator，惰性地生成内容，主要优点是较 for list comprehension 内存节省很多。
+
+
+it = (len(x) for x in open('/t">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2022-11-22T12:54:09+08:00">
+<meta property="article:tag" content="python">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+
+<!-- Header and menu bar -->
+<div class="container">
+      <header class="blog-header py-3"><div class="row nbb-header align-items-center">
+          <div class="col-md-3 col-xs-2 col-sm-2" style="width: auto;">
+            <button class="navbar-toggler navbar-light bg-light nbb-navbar-toggler" type="button" data-toggle="collapse" data-target=".bs-nav-collapsible" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
+                
+            </div>
+        </div>
+          <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
+            <a class="navbar-brand blog-header-logo text-dark" href="../../">
+
+            <span id="blog-title">My Nikola Site</span>
+        </a>
+          </div>
+            <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
+            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
+<li class="nav-item">
+    <a href="index.org" id="sourcelink" class="nav-link">源文件</a>
+    </li>
+
+
+                    
+            </ul></nav>
+</div>
+    </div>
+</header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
+            <ul class="navbar-nav nav-fill d-flex w-100">
+<li class="nav-item">
+<a href="../../archive.html" class="nav-link">文章归档</a>
+                </li>
+<li class="nav-item">
+<a href="../../categories/" class="nav-link">标签</a>
+                </li>
+<li class="nav-item">
+<a href="../../rss.xml" class="nav-link">RSS 源</a>
+
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</nav>
+</div>
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">effective python</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    <a class="u-url" href="../../authors/abner-zheng/">Abner Zheng</a>
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2022-11-22T12:54:09+08:00" itemprop="datePublished" title="2022-11-22 12:54">2022-11-22 12:54</time></a>
+            </p>
+            
+        <p class="sourceline"><a href="index.org" class="sourcelink">源文件</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <p>
+Python 逐渐成了干活的主力，所以最近一直在看书和材料精进一下 Python 的技艺。这里
+记录一下读书中觉得受用的知识点，以供之后复习。
+</p>
+
+<!--TEASER_END-->
+
+<div id="outline-container-orga76a5b2" class="outline-2">
+<h2 id="orga76a5b2">1. 生成器表达式</h2>
+<div class="outline-text-2" id="text-orga76a5b2">
+<p>
+主要的用法如下，可以使用一个括号快速生成一个 generator，惰性地生成内容，主要优点是较 for list comprehension 内存节省很多。
+</p>
+
+<div class="highlight"><pre><span></span><span class="n">it</span> <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'/tmp/my_file.txt'</span><span class="p">))</span>
+<span class="n">next_item</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">it</span><span class="p">:</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+<p>
+Python 中的 Generator 并没有常见的 has<sub>next</sub> 方法，而是通过处理 next 抛出的 StopException 来表明已经到了终点, 这是 Python 语言的哲学，  EAFP (easier to
+ask for forgiveness than permission), has<sub>next</sub> 遵循的原则是 LBYL (look before you leap)，与 EAFP 相悖。其实也是，我自己在做 SimpleDB 的时候，要支持 hasNext 方法，往往都需要在上一次的 next 方法中提前算好下一次的，效率上确实有所牺牲，但是拿一个 Exception 来做 Flow control 确实不大好。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org93d4794" class="outline-2">
+<h2 id="org93d4794">2. 尽量使用 enumerate 取代 range</h2>
+<div class="outline-text-2" id="text-org93d4794">
+<p>
+使用内置的 enumerate 可以同时拿到 index 和 item。
+</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">flavor</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">flavor_list</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">%d</span><span class="s2">: </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">flavor</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-org026dd1a" class="outline-2">
+<h2 id="org026dd1a">3. Python 的迭代器协议</h2>
+<div class="outline-text-2" id="text-org026dd1a">
+<p>
+Python 的 for 语句，以及一些接受 iterator 的函数，都会先调用对象的_<sub>iter</sub>_<sub>方法</sub>，得到
+一个迭代器对象，之后再反复调用 next 方法，直至耗尽并产生 StopIteration 异常。
+根据这个特点，我们可以在类中 override _<sub>iter</sub>_<sub>方法</sub>，并返回一个新的 generator 对象，
+保证这个实例能够重复被迭代。
+</p>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ReadVisits</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_path</span><span class="p">):</span>
+	<span class="bp">self</span><span class="o">.</span><span class="n">data_path</span> <span class="o">=</span> <span class="n">data_path</span>
+
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+	<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data_path</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+	    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+		<span class="k">yield</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-org7ca93b1" class="outline-2">
+<h2 id="org7ca93b1">4. 参数的默认值</h2>
+<div class="outline-text-2" id="text-org7ca93b1">
+<p>
+参数的默认值只在执行定义函数的时候定义一次，所以当这个值是一个可变参数时，往往会
+出错。比如:
+</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">log</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">when</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">when</span><span class="p">,</span> <span class="n">message</span><span class="p">))</span>
+<span class="n">log</span><span class="p">(</span><span class="s2">"hi"</span><span class="p">)</span>
+<span class="n">log</span><span class="p">(</span><span class="s2">"there"</span><span class="p">)</span>
+</pre></div>
+<p>
+两次调用的 when 将会是一致的，这显然不是我们想要的，作者建议我们使用 None 来表示缺省
+值。
+</p>
+
+<p>
+另外还会有一种情况，如:
+</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">decode</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="p">{}):</span>
+    <span class="k">try</span><span class="p">:</span>
+	<span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+	<span class="k">return</span> <span class="n">default</span>
+</pre></div>
+
+<p>
+每次调用 decode 方法返回的 default 其实是同一个对象。
+</p>
+</div>
+</div>
+<div id="outline-container-orgfd23708" class="outline-2">
+<h2 id="orgfd23708">5. 强制使用关键字参数</h2>
+<div class="outline-text-2" id="text-orgfd23708">
+<p>
+有时我们希望用户只能使用关键字参数，不能使用位置参数，这个需求可以用*来占位实现，
+如下：
+</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">safe_division</span><span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="n">divisor</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">ignore_overflow</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+<div id="outline-container-orgc745f9f" class="outline-2">
+<h2 id="orgc745f9f">6. 多用 public 属性，少用 private 属性</h2>
+<div class="outline-text-2" id="text-orgc745f9f">
+<p>
+Python 编译器无法严格保证 private 字段的私密性，所以最大的优势没了，而且在继承的子
+类中，也是无法访问父类的属性，这样反而会带来更多的麻烦，应该多用 protected 属性。
+</p>
+</div>
+</div>
+<div id="outline-container-org6a555ee" class="outline-2">
+<h2 id="org6a555ee">7. 继承 collections.abi 以实现自定义的容器类型</h2>
+<div class="outline-text-2" id="text-org6a555ee">
+<p>
+collections.abi 包中定义了一系列的容器抽象类，其中定义了一系列的必须实现的基本方
+法，继承类实现这些方法，就可以将这个继承类当成对应的容器类使用了。
+</p>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/python/" rel="tag">python</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../backtrader/" rel="prev" title="backtrader">上一篇文章</a>
+            </li>
+        </ul></nav></aside></article><!--End of body content--><footer id="footer">
+            Contents © 2022         <a href="mailto:abnerzheng@gmail.com">Abner Zheng</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script>
+</body>
+</html>
